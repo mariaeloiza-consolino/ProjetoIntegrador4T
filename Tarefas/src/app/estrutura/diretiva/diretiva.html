@@ -1,0 +1,12 @@
+<p>diretiva works!</p>
+
+<p *ngIf="mostrarMensagem">Visualizar ou Ocultar a Lista</p>
+<button (click)="toggleMensagem()">Clique Aqui</button>
+
+<ul *ngIf="mostrarMensagem">
+    <li *ngFor="let item of listaItens"> 
+        {{item.ID}} - {{item.Nome}} - {{item.Ativo}} 
+    </li>
+</ul>
+
+
