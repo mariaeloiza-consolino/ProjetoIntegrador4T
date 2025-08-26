@@ -1,12 +1,24 @@
-<p>diretiva works!</p>
-
 <p *ngIf="mostrarMensagem">Visualizar ou Ocultar a Lista</p>
 <button (click)="toggleMensagem()">Clique Aqui</button>
 
 <ul *ngIf="mostrarMensagem">
-    <li *ngFor="let item of listaItens"> 
-        {{item.ID}} - {{item.Nome}} - {{item.Ativo}} 
-    </li>
+  <li *ngFor="let item of listaItens" [style.fontSize.px]="fontSize">
+    {{item.ID}} - {{item.Nome}} - 
+   
+    <span [ngClass]="item.Ativo ? 'ativo' : 'inativo'"> 
+      {{item.Ativo ? 'Ativo' : 'Inativo'}}
+    </span>
+
+</li>
 </ul>
+
+<p *ngIf="mostrarMensagem"> Aumentar ou diminuir a fonte? </p>
+
+<button (click)= "aumentarFonte()"> + </button>
+
+<button (click)= "diminuirFonte()"> - </button>
+
+
+<!-- o span serve para aplicar a classe em somente uma parte do texto; item.Ativo ? 'Ativo' : 'Inativo' significa se o item.Ativo for true ele resulta em ativo e se ele for false ele resulta em inativo -->
 
 

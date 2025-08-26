@@ -17,7 +17,22 @@ export class Diretiva {
   ];
 
   mostrarMensagem = true;
+
+  fontSize = 14;
+
   toggleMensagem() {
    this.mostrarMensagem = !this.mostrarMensagem;
   }
+
+  aumentarFonte(){
+    this.fontSize +=2;
+  }
+
+  diminuirFonte(){
+    if (this.fontSize > 4){
+      this.fontSize -=2;
+    }
+   
+  }
+
 }

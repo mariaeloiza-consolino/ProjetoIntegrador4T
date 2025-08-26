@@ -1,0 +1,12 @@
+.ativo{
+    color:blue;
+    font-weight: bold;
+}
+.inativo{
+    color:red;
+    font-weight: bolder;
+}
+
+button {
+  margin-right: 10px; 
+}
