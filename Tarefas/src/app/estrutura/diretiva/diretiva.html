@@ -1,4 +1,4 @@
-<p *ngIf="mostrarMensagem">Visualizar ou Ocultar a Lista</p>
+<p>Visualizar ou Ocultar a Lista</p>
 <button (click)="toggleMensagem()">Clique Aqui</button>
 
 <ul *ngIf="mostrarMensagem">
@@ -14,9 +14,9 @@
 
 <p *ngIf="mostrarMensagem"> Aumentar ou diminuir a fonte? </p>
 
-<button (click)= "aumentarFonte()"> + </button>
+<button (click)= "aumentarFonte()" *ngIf="mostrarMensagem"> + </button>
 
-<button (click)= "diminuirFonte()"> - </button>
+<button (click)= "diminuirFonte()" *ngIf="mostrarMensagem"> - </button>
 
 
 <!-- o span serve para aplicar a classe em somente uma parte do texto; item.Ativo ? 'Ativo' : 'Inativo' significa se o item.Ativo for true ele resulta em ativo e se ele for false ele resulta em inativo -->
