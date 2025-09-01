@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let item of produtos" 
+    *ngIf = "disponibilidade"> {{mensagem}}
+    {{item.Nome}} - {{item.Preco}} - {{item.Estoque}}
+</li>
+</ul>

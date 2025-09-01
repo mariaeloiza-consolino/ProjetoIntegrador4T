@@ -6,8 +6,12 @@ const routes: Routes = [
   loadChildren: () => import ('./contador/contador-module').then(m => m.ContadorModule)},
 
   {path:'estrutura',
-  loadChildren: () => import ('./estrutura/estrutura-module').then(m => m.EstruturaModule)}
+  loadChildren: () => import ('./estrutura/estrutura-module').then(m => m.EstruturaModule)},
+
+  {path:'produtos',
+  loadChildren: () => import ('./produtos/produtos-module').then(m => m.ProdutosModule)}
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
