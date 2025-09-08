@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-estoque',
   standalone: false,
   templateUrl: './estoque.html',
-  styleUrl: './estoque.css'
+  styleUrl: './estoque.css',
 })
 export class Estoque {
 
