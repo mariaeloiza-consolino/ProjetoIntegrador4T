@@ -3,12 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { BotaoComponent } from './SharedModule/botao-component/botao-component';
 
 @NgModule({
   declarations: [
-    App,
-    BotaoComponent
+    App
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,32 @@
-<ul>
-  <li *ngFor="let item of produtos" 
-    *ngIf = "disponibilidade"> {{mensagem}}
-    {{item.Nome}} - {{item.Preco}} - {{item.Estoque}}
-</li>
-</ul>
+<div class = "centralizado">
+<p class = "margem cima"> Clique aqui para aumentar os preços dos produtos em 10% </p>
+<button class = "margem" (click) = "aumentarPreco()"> Aumentar </button>
+    
+<p class = "margem">Clique aqui para dar um desconto de 10% nos preços dos produtos</p>
+<button class = "margem" (click) = "diminuirPreco()"> Diminuir </button>
+
+<div class = "quadrado">
+  <ul>
+    <li *ngFor="let produto of produtos">
+     <p
+        [ngClass]="{
+          'disponivel': produto.Estoque > 0,
+          'indisponivel': produto.Estoque === 0
+    }"
+  >
+    {{produto.Nome}} -
+    <span>
+        {{ produto.Estoque > 0 ? 'Disponível' : 'Indisponível' }}
+    </span>
+     </p>
+
+  <!-- Se o preço do produto for maior que dois mil for true, ele vai ativar maior, se for menor ele vai ativar menor -->
+  <p [ngClass]="produto.Preco > 2000 ? 'maior' : 'menor'">
+    <!-- adiciona Preço: R$ antes dos numeros e define as casas decimais-->
+    Preço: R$ {{ produto.Preco | number: '1.2-2' }}
+  </p>
+
+    </li>
+  </ul>
+</div>
+</div>

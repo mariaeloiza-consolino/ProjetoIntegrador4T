@@ -1,0 +1,40 @@
+.disponivel {
+    color: rgb(168, 211, 168);
+    font-weight: bold;
+}
+
+.indisponivel {
+    color: rgb(190, 58, 58);
+    font-style: italic;
+}
+
+.maior {
+  color: rgba(9, 36, 124, 0.884);
+}
+
+.menor {
+  color: black;
+}
+
+.margem{
+    margin-left: 20px;
+}
+
+.quadrado {
+  border: 2px solid #ccc;         /* Borda cinza */
+  padding: 20px;                    /* Espaçamento interno */
+  margin: 20px;                     /* Espaçamento externo */
+  border-radius: 10px;              /* Cantos arredondados */
+  background-color: #f9f9f9;      /* Cor de fundo suave */
+  width: 400px;                     /* Largura fixa (opcional) */
+}
+
+.centralizado {
+    width: 440px;        /* Largura maior que o quadrado pra dar espaço */
+    margin: 0 auto;      /* margem automática esquerda e direita = centraliza */
+    text-align: center;  /* centraliza textos e botões dentro */
+}
+
+.cima{
+    margin-top: 30px;
+}
